@@ -5,8 +5,8 @@ inputs:
     default: "false"
     description: whether to install the dependencies specified in pyproject.toml
   python-version:
+    default: "" # Python version from pyproject.toml or .python-version will be installed.
     description: Python version to be installed
-    required: false
 runs:
   using: composite
   steps:
