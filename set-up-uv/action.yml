@@ -3,7 +3,7 @@ description: Install uv and Python and, if desired, dependencies
 inputs:
   install-and-cache-dependencies:
     default: "false"
-    description: whether to install the dependencies specified in pyproject.toml
+    description: Whether to install the dependencies specified in pyproject.toml
   python-version:
     default: "" # Python version from pyproject.toml or .python-version will be installed.
     description: Python version to be installed
