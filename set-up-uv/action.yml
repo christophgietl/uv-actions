@@ -1,5 +1,5 @@
 name: Set up uv
-description: Install uv and Python and, if desired, dependencies
+description: Installs uv and Python and, if desired, dependencies
 inputs:
   install-and-cache-dependencies:
     default: "false"
