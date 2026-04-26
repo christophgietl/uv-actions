@@ -1,0 +1,61 @@
+default_install_hook_types:
+  - commit-msg
+  - pre-commit
+default_stages:
+  - pre-commit
+minimum_pre_commit_version: 4.5.1
+repos:
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 6a280ba12b7901e47757c868c8c13c6a624c9ecb  # frozen: 0.11.7
+    hooks:
+      - id: uv-lock
+  - repo: https://github.com/codespell-project/codespell
+    rev: 2ccb47ff45ad361a21071a7eedda4c37e6ae8c5a  # frozen: v2.4.2
+    hooks:
+      - id: codespell
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: acc9d9de6369b76d22cb4167029d2035e8730b98  # frozen: v0.19.1
+    hooks:
+      - id: gitlint
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-illegal-windows-names
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-vcs-permalinks
+      - id: check-xml
+      - id: check-yaml
+      - id: debug-statements
+      - id: destroyed-symlinks
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: fix-byte-order-marker
+      - id: forbid-submodules
+      - id: mixed-line-ending
+      - id: name-tests-test
+        args:
+          - --pytest-test-first
+      - id: pretty-format-json
+      - id: trailing-whitespace
+  - repo: https://github.com/rhysd/actionlint
+    rev: 914e7df21a07ef503a81201c76d2b11c789d3fca  # frozen: v1.7.12
+    hooks:
+      - id: actionlint
+  - repo: https://github.com/rvben/rumdl-pre-commit
+    rev: 07a5356d72a6c47d688c109e77631af1618f5ee2  # frozen: v0.1.72
+    hooks:
+      - id: rumdl
+      - id: rumdl-fmt
+  - repo: https://github.com/zizmorcore/zizmor-pre-commit
+    rev: a4727cbbcd26d7098e96b9cb738169b59711ae51  # frozen: v1.24.1
+    hooks:
+      - id: zizmor
+        args:
+          - --fix=safe
