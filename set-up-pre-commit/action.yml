@@ -1,5 +1,7 @@
 name: Set up pre-commit
-description: Caches and sets up environments for pre-commit
+description: >
+  Caches and sets up environments for pre-commit.
+  Requires uv to be set up first, e.g. by using ./set-up-uv.
 inputs:
   cache-key-suffix:
     default: ""
