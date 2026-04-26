@@ -4,11 +4,9 @@ inputs:
   cache-key-suffix:
     default: ""
     description: Key suffix for the pre-commit cache. Useful for differentiating runs.
-    required: true
   install-git-hooks:
     default: "false"
     description: whether to install the git hooks for pre-commit
-    required: true
 runs:
   using: composite
   steps:
