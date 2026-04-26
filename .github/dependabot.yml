@@ -4,6 +4,7 @@ updates:
     cooldown:
       default-days: 7
     directories:
+      - /
       - /*/
     groups:
       github-actions:
