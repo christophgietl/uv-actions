@@ -11,3 +11,21 @@ updates:
           - "*"
     schedule:
       interval: daily
+  - package-ecosystem: pre-commit
+    cooldown:
+      default-days: 7
+    directory: /
+    groups:
+      pre-commit:
+        patterns:
+          - "*"
+    schedule:
+      interval: daily
+  - package-ecosystem: uv
+    allow:
+      - dependency-type: all
+    cooldown:
+      default-days: 7
+    directory: /
+    schedule:
+      interval: daily
