@@ -2,10 +2,12 @@ name: Set up pre-commit
 description: >
   Caches and sets up environments for pre-commit.
   Requires uv to be set up first, e.g. by using ./set-up-uv.
+  Requires pre-commit to be specified as a (dev) dependency in pyproject.toml.
+  Requires a .pre-commit-config.yaml file in the repository.
 inputs:
   cache-key-suffix:
     default: ""
-    description: Key suffix for the pre-commit cache. Useful for differentiating runs
+    description: Key suffix for the pre-commit cache. Useful for differentiating between runs
   install-git-hooks:
     default: "false"
     description: Whether to install the git hooks for pre-commit
