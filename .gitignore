@@ -9,5 +9,8 @@ dist/
 wheels/
 *.egg-info
 
+# rumdl-generated files
+.rumdl_cache/
+
 # Virtual environments
 .venv
