@@ -1,0 +1,16 @@
+name: Set up uv and pre-commit for Copilot
+description: >
+  Sets up uv and pre-commit with the exact configuration required by
+  copilot-setup-steps.yml workflows.
+  Installs and caches dependencies, sets up pre-commit environments, and
+  installs the git hooks for pre-commit.
+runs:
+  using: composite
+  steps:
+    - uses: christophgietl/uv-actions/set-up-uv@e75e1e587602469dee34939418204d0648d6b667 # 2026.6.10
+      with:
+        install-and-cache-dependencies: true
+    - uses: christophgietl/uv-actions/set-up-pre-commit@e75e1e587602469dee34939418204d0648d6b667 # 2026.6.10
+      with:
+        cache-key-suffix: copilot-setup-steps
+        install-git-hooks: true
