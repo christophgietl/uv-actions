@@ -15,13 +15,18 @@ runs:
   using: composite
   steps:
     - id: cache
-      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+      uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
       with:
         key: pre-commit--${{ hashFiles('.pre-commit-config.yaml') }}-${{ inputs.cache-key-suffix }}
         path: ~/.cache/pre-commit
     - if: steps.cache.outputs.cache-hit != 'true'
       run: uv run --no-sync pre-commit install-hooks # sets up the pre-commit environments
       shell: bash
+    - if: steps.cache.outputs.cache-hit != 'true'
+      uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9  # v6.1.0
+      with:
+        key: pre-commit--${{ hashFiles('.pre-commit-config.yaml') }}-${{ inputs.cache-key-suffix }}
+        path: ~/.cache/pre-commit
     - if: fromJSON(inputs.install-git-hooks)
       run: uv run --no-sync pre-commit install # sets up the git hooks for pre-commit
       shell: bash
