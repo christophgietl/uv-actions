@@ -11,7 +11,7 @@ updates:
         patterns:
           - "*"
     schedule:
-      interval: daily
+      interval: weekly
   - package-ecosystem: pre-commit
     cooldown:
       default-days: 7
@@ -21,7 +21,7 @@ updates:
         patterns:
           - "*"
     schedule:
-      interval: daily
+      interval: weekly
   - package-ecosystem: uv
     allow:
       - dependency-type: all
