@@ -11,7 +11,7 @@ updates:
         patterns:
           - "*"
     schedule:
-      interval: weekly
+      interval: daily
   - package-ecosystem: pre-commit
     cooldown:
       default-days: 7
