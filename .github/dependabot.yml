@@ -12,7 +12,7 @@ updates:
           - "*"
     schedule:
       interval: daily
-      time: 00:41
+      time: "00:41"
       timezone: Europe/Berlin
   - package-ecosystem: pre-commit
     cooldown:
@@ -25,7 +25,7 @@ updates:
     schedule:
       day: saturday
       interval: weekly
-      time: 00:41
+      time: "00:41"
       timezone: Europe/Berlin
   - package-ecosystem: uv
     allow:
@@ -35,5 +35,5 @@ updates:
     directory: /
     schedule:
       interval: daily
-      time: 00:41
+      time: "00:41"
       timezone: Europe/Berlin
