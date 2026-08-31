@@ -7,10 +7,10 @@ description: >
 runs:
   using: composite
   steps:
-    - uses: christophgietl/uv-actions/set-up-uv@50c092a49b4c930d4320a236346fa619d79ce6b1 # 2026.8.1
+    - uses: christophgietl/uv-actions/set-up-uv@07cb8103099a2fa4ce91b22dcfe09d86916838c8 # 2026.8.1
       with:
         install-and-cache-dependencies: true
-    - uses: christophgietl/uv-actions/set-up-pre-commit@50c092a49b4c930d4320a236346fa619d79ce6b1 # 2026.8.1
+    - uses: christophgietl/uv-actions/set-up-pre-commit@07cb8103099a2fa4ce91b22dcfe09d86916838c8 # 2026.8.1
       with:
         cache-key-suffix: copilot-setup-steps
         install-git-hooks: true
