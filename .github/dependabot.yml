@@ -33,6 +33,10 @@ updates:
     cooldown:
       default-days: 7
     directory: /
+    groups:
+      uv-patch:
+        update-types:
+          - patch
     schedule:
       interval: daily
       time: "00:41"
