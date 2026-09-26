@@ -29,11 +29,26 @@ updates:
       timezone: Europe/Berlin
   - package-ecosystem: uv
     allow:
-      - dependency-type: all
+      - dependency-type: direct
     cooldown:
       default-days: 7
     directory: /
     schedule:
       interval: daily
+      time: "00:41"
+      timezone: Europe/Berlin
+  - package-ecosystem: uv
+    allow:
+      - dependency-type: indirect
+    cooldown:
+      default-days: 7
+    directory: /
+    groups:
+      uv-indirect:
+        patterns:
+          - "*"
+    schedule:
+      day: saturday
+      interval: weekly
       time: "00:41"
       timezone: Europe/Berlin
