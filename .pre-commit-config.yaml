@@ -5,7 +5,7 @@ default_stages:
   - pre-commit
 repos:
   - repo: https://github.com/astral-sh/uv-pre-commit
-    rev: 17a6b18b8006d390e476d419631aae885cadfa40  # frozen: 0.12.17
+    rev: 2aeb804518b4373dbf5adb8dddc5466d9a6e6b21  # frozen: 0.12.19
     hooks:
       - id: uv-lock
   - repo: https://github.com/codespell-project/codespell
@@ -48,7 +48,7 @@ repos:
     hooks:
       - id: actionlint
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: e5ecce62dbd84b035277acbba3e2667a49079c0a  # frozen: v0.2.74
+    rev: cbd02203fbbb2839cd7e25e3062628ba4af18991  # frozen: v0.2.77
     hooks:
       - id: rumdl
       - id: rumdl-fmt
