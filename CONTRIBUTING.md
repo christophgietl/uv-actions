@@ -16,8 +16,11 @@ The following section describes how to set up and use a development environment.
 Please follow these steps to set up your development environment:
 
 1. Install `uv` if you have not already done so.
+
 2. Clone the `uv-actions` repository and `cd` into it.
+
 3. Install development dependencies by running `uv sync`.
+
 4. Set up the hooks by executing `uv run pre-commit install`.
    The output should look something like this:
 
